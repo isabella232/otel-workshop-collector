@@ -1,0 +1,12 @@
+{
+  "install": "echo nothing to do",
+  "start": "./otelcontribcol_linux_amd64 --config otel-collector-config.yaml",
+  "watch": {
+    "restart": {
+      "include": [
+        "otelcontribcol_linux_amd64",
+        "\\.yaml$"
+      ]
+    }
+  }
+}
