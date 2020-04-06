@@ -1,10 +1,10 @@
 {
-  "install": "echo nothing to do",
-  "start": "./otelcontribcol_linux_amd64 --config otel-collector-config.yaml",
+  "install": "wget -O /tmp/otelcontribcol_linux_amd64 https://github.com/open-telemetry/opentelemetry-collector-contrib/releases/download/v0.3.0/otelcontribcol_linux_amd64",
+  "start": "/tmp/otelcontribcol_linux_amd64 --config otel-collector-config.yaml",
   "watch": {
     "restart": {
       "include": [
-        "otelcontribcol_linux_amd64",
+        "/tmp/otelcontribcol_linux_amd64",
         "\\.yaml$"
       ]
     }
